@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<style>
+    .subDiv {
+        background-color: antiquewhite;
+    }
+</style>
+
+
+
+<div class="jumbotron" id="mainDiv">
+
+</div>
+<div class="container">
+   
+    <div class="row">
+        <div class="col-lg-12">
+            <label class="control-label">Title:</label>
+            <input type="text" id="txtTitle" class="form-control" />
+        </div>
+        <div class="col-lg-12">
+            <label class="control-label">Body:</label>
+            <textarea id="txtDescription"></textarea>
+        </div>
+    </div>
+
+
+</div>
+<script src="~/Scripts/app/user/user.js"></script>
+<scrip>
+    @*if()@ViewBag.isAdmin
+    user.setAsAdmin();*@
+</scrip>
+<script src="~/Scripts/app/annoncements/annoncement-api.js"></script>
+<script src="~/Scripts/app/annoncements/annoncement-editor.js"></script>
+<script src="~/Scripts/app/annoncements/annoncement-builder.js"></script>
+<script src="~/Scripts/app/annoncements/annoncement-main.js"></script>
+<script>
+    /** working sample
+    $(function () {
+
+        var $cleditor = $("#txtDescription").cleditor();
+        setTimeout(function () {
+            var editor = $cleditor[0];
+            editor.$area.val("tydfashkljdfjksadf");
+            editor.updateFrame();
+        }, 500);
+
+    **/
+
+    
+
+   
+
+    //please create 3 files and see if this still works.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    $(function () {
+
+        var $cleditor = $("#txtDescription").cleditor();
+        setTimeout(function () {
+            var editor = $cleditor[0];
+            editor.$area.val("tydfashkljdfjksadf");
+            editor.updateFrame();
+        }, 500);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //   $("#txtDescription").cleditor().focus();
+
+
+
+
+
+
+
+
+
+        // $cleditor.updateTextArea(html)
+
+        /*
+        $.get("Dashboard/GetAllAnnouncements")
+            .done(
+            function (data) {
+
+                console.log(data)
+                $.each(data, function (i, v) {
+                    var div1 = $("<div/>");
+                    var btnEdit = $("<input/>",
+                        {
+                            type: 'button',
+                            value: 'Edit',
+                            id: v.Id,
+                            on: {
+                                click: function () {
+                                   // $("#txtDescription").html("Hi this is .");
+
+                                    setTimeout(function () {
+                                        var $editor = $("#txtDescription").cleditor();
+
+                                        $editor.html("Hi this is .");
+                                       // $editor.updateFrame();
+
+                                    },10);
+                                    //$.get("Dashboard/GetAnnouncement?id=" + v.Id)
+                                    //    .done(function (data1) {
+                                    //        console.log(data);
+                                    //        $("#txtTitle").val(data1.Title);
+
+                                    //        var $editor = $("#txtDescription").cleditor();
+
+                                    //        $editor.html(data1.Description);
+                                    //        $editor.updateFrame();
+                                    //        //editor.updateFrame();
+                                    //        //$("#txtDescription").css("style","display:block");
+                                    //    }).fail(function () {
+                                    //        alert("Fail");
+                                    //    });
+                                }
+                            },
+
+                        });
+                   // btnEdit.addClass("class", "btn btn-primary")
+                    div1.html(v.Title + "<br/>" + v.Description);
+                    div1.attr("class", "alert alert-warning");
+                    div1.append(btnEdit);
+                    $("#mainDiv").append(div1);
+                });
+
+            })
+            .fail(function () { alert("Failed") });
+
+
+    });
+    */
+</script>
