@@ -39,11 +39,11 @@
 
 <script src="~/Scripts/app/app.js"></script>
 <script src="~/Scripts/app/user/user.js"></script>
-
-@*announcement module start*@
 <script>
 var isAdmin=@Html.Raw(Json.Encode(@ViewBag.IsAdmin));
 </script>
+
+@*announcement module start*@
 <script src="~/Scripts/app/annoncements/announcement-dto.js"></script>
 <script src="~/Scripts/app/annoncements/announcement-session.js"></script>
 <script src="~/Scripts/app/annoncements/annoncement-api.js"></script>
