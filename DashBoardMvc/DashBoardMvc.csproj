@@ -165,10 +165,10 @@
     <Content Include="Scripts\app\annoncements\annoncement-main.js" />
     <Content Include="Scripts\app\annoncements\announcement-dto.js" />
     <Content Include="Scripts\app\annoncements\announcement-page.js" />
-    <Content Include="Scripts\app\annoncements\announcement-refresh.js" />
+    <Content Include="Scripts\app\annoncements\handlers\announcement-refresh-handler.js" />
     <Content Include="Scripts\app\annoncements\announcement-session.js" />
-    <Content Include="Scripts\app\annoncements\handlers\edit-handler.js" />
-    <Content Include="Scripts\app\annoncements\handlers\update-handler.js" />
+    <Content Include="Scripts\app\annoncements\handlers\announcement-edit-handler.js" />
+    <Content Include="Scripts\app\annoncements\handlers\announcement-update-handler.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\user\user.js" />
     <Content Include="Scripts\bootstrap.js" />
