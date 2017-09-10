@@ -1,8 +1,17 @@
 ﻿
+
+var ACCOUNTRY_APP = {
+
+
+};
+
+
+
 /*
 * this is main class which does initial bootstrapping. 
 *editor-main.js*/
 $(function () {
+
     if (isAdmin==="true") {
         user.setAsAdmin();
     }
