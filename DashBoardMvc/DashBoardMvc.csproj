@@ -160,9 +160,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\annoncements\annoncement-api.js" />
-    <Content Include="Scripts\app\annoncements\annoncement-builder.js" />
+    <Content Include="Scripts\app\annoncements\annoncement-controller.js" />
     <Content Include="Scripts\app\annoncements\annoncement-editor.js" />
     <Content Include="Scripts\app\annoncements\annoncement-main.js" />
+    <Content Include="Scripts\app\annoncements\announcement-dto.js" />
     <Content Include="Scripts\app\user\user.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

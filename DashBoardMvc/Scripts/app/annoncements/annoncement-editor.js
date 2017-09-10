@@ -2,6 +2,8 @@
 /*
 * this class has responsibility to update CL EDITOR
 editor.js*/
+
+//clEditor class
 var annoncementEditor = (function () {
     var $editor;
     var editor;
@@ -9,9 +11,11 @@ var annoncementEditor = (function () {
 
     return {
         init: init,
-        setText: updateText,
+        setText: setText,
+        getText: getText,
         setTitle: setTitle,
-        getText : getText
+        getTitle: getTitle,
+        refresh: refresh,
     };
 
     function init(editorId, titleId) {
@@ -25,13 +29,25 @@ var annoncementEditor = (function () {
         $title.val(text);
     }
 
-    function updateText(textToDisplay) {
+    function getTitle() {
+        return $title.val();
+    }
+
+    function setText(textToDisplay) {
         editor.$area.val(textToDisplay);
         editor.updateFrame();
     }
 
     function getText() {
         return editor.$area.val();
+    }
+
+   
+
+    //it will refresh the cleditor with title and description.
+    function refresh(title,description) {
+        setText(description);
+        setTitle(title);
     }
 
 })();

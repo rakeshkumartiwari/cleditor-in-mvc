@@ -1,14 +1,10 @@
 ﻿var annoncementApi = (function () {
-    // move you ajax call here 
-    // this is your homework.
-
-   // good bye
-
-//  hoe to get value of cleditor
-
+   
+    //repository
     return {
         getAnnoncementById: getAnnoncementById,
-        getAllAnnoncements: getAllAnnoncements
+        getAllAnnoncements: getAllAnnoncements,
+        updateAnnouncement: updateAnnouncement
     }
     function getAnnoncementById(id) {
         return $.get("Dashboard/GetAnnouncement?id=" + id);
@@ -18,4 +14,7 @@
         return $.get("Dashboard/GetAllAnnouncements");
     }
 
+    function updateAnnouncement(announcement) {
+        return $.post("Dashboard/UpdateAnnouncement", announcement);
+    }
 })();

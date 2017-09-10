@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DashBoardMvc.Models;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace DashBoardMvc.Controllers
 {
@@ -12,6 +14,8 @@ namespace DashBoardMvc.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
+           var d = true;
+            ViewBag.IsAdmin= JsonConvert.SerializeObject(d);
             return View();
         }
 
@@ -27,6 +31,12 @@ namespace DashBoardMvc.Controllers
             var announcement = Announcement.GetAllAnnouncements().FirstOrDefault(i=>i.Id==id);
 
             return new JsonResult { Data = announcement, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+        [HttpPost]
+        public ActionResult UpdateAnnouncement(Announcement announcement)
+        {
+            //return View();
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
     }
 }

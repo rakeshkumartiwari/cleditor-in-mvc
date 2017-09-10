@@ -16,7 +16,7 @@
 
 </div>
 <div class="container">
-   
+    <div id="error" style="color:red;"></div>
     <div class="row">
         <div class="col-lg-12">
             <label class="control-label">Title:</label>
@@ -26,19 +26,24 @@
             <label class="control-label">Body:</label>
             <textarea id="txtDescription"></textarea>
         </div>
+        <div id="btnDiv">
+            <button type="submit" id="btnUpdate" style="display:none">Update</button>
+        </div>
     </div>
-
-
 </div>
+
 <script src="~/Scripts/app/user/user.js"></script>
-<scrip>
-    @*if()@ViewBag.isAdmin
-    user.setAsAdmin();*@
-</scrip>
+@*announcement module start*@
+<script>
+var isAdmin=@Html.Raw(Json.Encode(@ViewBag.IsAdmin));
+</script>
+<script src="~/Scripts/app/annoncements/announcement-dto.js"></script>
 <script src="~/Scripts/app/annoncements/annoncement-api.js"></script>
 <script src="~/Scripts/app/annoncements/annoncement-editor.js"></script>
-<script src="~/Scripts/app/annoncements/annoncement-builder.js"></script>
+<script src="~/Scripts/app/annoncements/annoncement-controller.js"></script>
 <script src="~/Scripts/app/annoncements/annoncement-main.js"></script>
+@*announcement module start*@
+
 <script>
     /** working sample
     $(function () {
@@ -51,35 +56,6 @@
         }, 500);
 
     **/
-
-    
-
-   
-
-    //please create 3 files and see if this still works.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -94,32 +70,7 @@
         }, 500);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //   $("#txtDescription").cleditor().focus();
-
-
-
-
-
-
-
-
 
         // $cleditor.updateTextArea(html)
 

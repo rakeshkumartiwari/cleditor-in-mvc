@@ -3,9 +3,10 @@
 * this is main class which does initial bootstrapping. 
 *editor-main.js*/
 $(function () {
-
-    user.setAsUser();
+    if (isAdmin) {
+        user.setAsAdmin();
+    }
     annoncementEditor.init('txtDescription', 'txtTitle');
-    annoncementBuilder.init();
+    annoncementController.init();
    
 });
