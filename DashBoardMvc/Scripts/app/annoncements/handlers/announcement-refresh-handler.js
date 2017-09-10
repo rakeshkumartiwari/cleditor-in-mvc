@@ -4,7 +4,9 @@
     announcementSession,
     annoncementApi,
     annoncementEditor,
-    announcementEditHandler
+    announcementEditHandler,
+    announcementDeleteHandler
+
 ) {
 
     return {
@@ -34,14 +36,16 @@
             var div1 = $("<div/>");
 
             var btnEdit = getEditButton(v.Id);
+            var btnDelete = getDeleteButton(v.Id)
             div1.html(v.Title + "<br/>" + v.Description);
             div1.attr("class", "alert alert-warning");
 
             if (btnEdit != null) {
                 div1.append(btnEdit);
             }
-
-
+            if (btnDelete != null) {
+                div1.append(btnDelete);
+            }
             $("#announcements-container").append(div1);
         });
     }
@@ -65,6 +69,26 @@
 
         return btnEdit;
     }
+
+    function getDeleteButton(id) {
+        if (!user.isAdmin()) {
+            return null;
+        }
+        var btnDelete = $("<input/>",
+            {
+                type: 'button',
+                value: 'Delete',
+                id: id,
+                on: {
+                    click: function () {
+                        announcementDeleteHandler.onDelete(id)
+                    }
+                },
+
+            });
+
+        return btnDelete;
+    }
     function onRefeshAnnouncementsFail(obj) {
         announcmentPage.showError("Announcement load fail");
     }
@@ -75,5 +99,7 @@
     ACCOUNTRY_APP.announcementSession,
     ACCOUNTRY_APP.annoncementApi,
     ACCOUNTRY_APP.annoncementEditor,
-    ACCOUNTRY_APP.announcementEditHandler
+    ACCOUNTRY_APP.announcementEditHandler,
+    ACCOUNTRY_APP.announcementDeleteHandler
+
     );

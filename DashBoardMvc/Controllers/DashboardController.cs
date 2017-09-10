@@ -38,5 +38,12 @@ namespace DashBoardMvc.Controllers
             //return View();
             return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
+
+        [HttpPost]
+        public ActionResult DeleteAnnouncement(Announcement announcement)
+        {
+            //return View();
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
+        }
     }
 }

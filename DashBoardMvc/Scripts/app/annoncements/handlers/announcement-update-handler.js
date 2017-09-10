@@ -40,4 +40,5 @@
     ACCOUNTRY_APP.announcmentPage,
     ACCOUNTRY_APP.annoncementEditor,
     ACCOUNTRY_APP.announcementRefreshHandler,
-    ACCOUNTRY_APP.announcementSession);
+    ACCOUNTRY_APP.announcementSession
+    );

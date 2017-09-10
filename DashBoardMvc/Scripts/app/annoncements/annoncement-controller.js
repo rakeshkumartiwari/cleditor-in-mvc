@@ -31,6 +31,7 @@ ACCOUNTRY_APP.annoncementController = (function (announcementRefreshHandler, ann
     // binding button click handlers
     function bindEventHandlers() {
         $("#btnUpdate").on("click", announcementUpdateHandler.onUpdate);
+
         //by this time page is rendered so i can modifie the dom .
 
         //todo 
