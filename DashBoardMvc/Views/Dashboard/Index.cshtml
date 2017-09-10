@@ -12,20 +12,24 @@
 
 
 
-<div class="jumbotron" id="mainDiv">
+<div class="jumbotron" id="announcements-container">
 
 </div>
 <div class="container">
     <div id="error" style="color:red;"></div>
+    
     <div class="row">
-        <div class="col-lg-12">
-            <label class="control-label">Title:</label>
-            <input type="text" id="txtTitle" class="form-control" />
+        <div id="cleditor-container">
+            <div class="col-lg-12">
+                <label class="control-label">Title:</label>
+                <input type="text" id="txtTitle" class="form-control" />
+            </div>
+            <div class="col-lg-12">
+                <label class="control-label">Body:</label>
+                <textarea id="txtDescription"></textarea>
+            </div>
         </div>
-        <div class="col-lg-12">
-            <label class="control-label">Body:</label>
-            <textarea id="txtDescription"></textarea>
-        </div>
+       
         <div id="btnDiv">
             <button type="submit" id="btnUpdate" style="display:none">Update</button>
         </div>

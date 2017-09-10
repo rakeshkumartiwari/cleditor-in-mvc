@@ -25,47 +25,62 @@ var annoncementController = (function () {
     function init() {
         refeshAnnouncements();
         bindEventHandlers();
-       
+
     }
 
     // refeshAnnouncements starts
     function refeshAnnouncements() {
-        cleanMainDiv();
+        
+        cleanAnnouncements();
         resetCurrentId();
         annoncementApi.getAllAnnoncements()
             .done(onRefreshAnnouncementsSuccess)
             .fail(onRefeshAnnouncementsFail);
+
+
     }
 
     function onRefreshAnnouncementsSuccess(data) {
+        buildAnnouncements(data);
+        annoncementEditor.hideEditor();
+    }
+
+    function buildAnnouncements(data) {
         $.each(data, function (i, v) {
             var div1 = $("<div/>");
 
-            var btnEdit = $("<input/>",
-                {
-                    type: 'button',
-                    value: 'Edit',
-                    id: v.Id,
-                    on: {
-                        click: function () {
-                            onEdit(v.Id);
-                        }
-                    },
-
-                });
-            // btnEdit.addClass("class", "btn btn-primary")
+            var btnEdit = getEditButton(v.Id);
             div1.html(v.Title + "<br/>" + v.Description);
             div1.attr("class", "alert alert-warning");
 
+            if (btnEdit != null) {
+                div1.append(btnEdit);
+            }
 
-            div1.append(btnEdit);
-           
-            $("#mainDiv").append(div1);
+
+            $("#announcements-container").append(div1);
         });
-
-
     }
 
+    function getEditButton(id) {
+        if (!user.isAdmin()) {
+            return null;
+        }
+        var btnEdit = $("<input/>",
+            {
+                type: 'button',
+                value: 'Edit',
+                id: id,
+                on: {
+                    click: function () {
+                        onEdit(id);
+                    }
+                },
+
+            });
+
+        return btnEdit;
+    }
     function onRefeshAnnouncementsFail(obj) {
         showError("Announcement load fail");
     }
@@ -75,12 +90,19 @@ var annoncementController = (function () {
     function bindEventHandlers() {
         $("#btnUpdate").on("click", onUpdate);
         //by this time page is rendered so i can modifie the dom .
+
+        if (user.isAdmin()) {
+
+        }
+
         //todo 
     }
 
-// onEdit starts
+    // onEdit starts
     //It is editbtn click hanler
     function onEdit(id) {
+        hideAnnouncements();
+        annoncementEditor.showEditor();
         setCurrentId(id)
         annoncementApi.getAnnoncementById(id)
             .done(onEditSuccess)
@@ -88,6 +110,7 @@ var annoncementController = (function () {
     }
 
     function onEditSuccess(data) {
+
         annoncementEditor.refresh(data.Title, data.Description);
         showUpdateButton();
     }
@@ -113,7 +136,8 @@ var annoncementController = (function () {
     }
 
     function onUpdateSuccess() {
-        
+        annoncementEditor.hideEditor();
+        showAnnouncements();
         refeshAnnouncements();
         hideUpdateButton();
     }
@@ -121,7 +145,7 @@ var annoncementController = (function () {
     function onUpdateFail(obj) {
         showError("Update failed.");
     }
-      // onUpdate starts
+    // onUpdate starts
 
     //any jquery related should go in its own function like "showUpdateButton".
     //All jquery related function can go is in own class called as announcement-page.js.
@@ -137,8 +161,16 @@ var annoncementController = (function () {
         $("#error").html(msg);
     }
 
-    function cleanMainDiv() {
-        $("#mainDiv").empty();
+    function cleanAnnouncements() {
+        $("#announcements-container").empty();
+    }
+
+    function showAnnouncements() {
+        $("#announcements-container").show();
+    }
+
+    function hideAnnouncements() {
+        $("#announcements-container").hide();
     }
 
     function setCurrentId(id) {
@@ -146,14 +178,14 @@ var annoncementController = (function () {
     }
 
     function getCurrentId() {
-        return currentId ;
+        return currentId;
     }
 
     function resetCurrentId() {
-        return currentId=-1;
+        return currentId = -1;
     }
 
-   
+
 })();
 
 

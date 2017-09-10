@@ -8,7 +8,7 @@ var annoncementEditor = (function () {
     var $editor;
     var editor;
     var $title;
-
+    var $container;
     return {
         init: init,
         setText: setText,
@@ -16,12 +16,15 @@ var annoncementEditor = (function () {
         setTitle: setTitle,
         getTitle: getTitle,
         refresh: refresh,
+        showEditor: showEditor,
+        hideEditor: hideEditor
     };
 
-    function init(editorId, titleId) {
+    function init(editorId, titleId,containerId) {
         $editor = $("#" + editorId).cleditor();
         editor = $editor[0];
         $title = $('#' + titleId);
+        $container = $('#' + containerId);
         editor.focus();
     }
 
@@ -48,6 +51,14 @@ var annoncementEditor = (function () {
     function refresh(title,description) {
         setText(description);
         setTitle(title);
+    }
+
+    function showEditor() {
+        $container.show();
+    }
+
+    function hideEditor() {
+        $container.hide();
     }
 
 })();
