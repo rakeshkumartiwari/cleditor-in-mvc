@@ -1,4 +1,4 @@
-﻿var announcementEditHandler = (function () {
+﻿ACCOUNTRY_APP.announcementEditHandler = (function (annoncementEditor, announcmentPage, annoncementApi, announcementSession) {
    
     return {
         onEdit: onEdit
@@ -27,4 +27,4 @@
     // onEdit starts
 
 
-})();
+})(ACCOUNTRY_APP.annoncementEditor, ACCOUNTRY_APP.announcmentPage, ACCOUNTRY_APP.annoncementApi, ACCOUNTRY_APP.announcementSession);

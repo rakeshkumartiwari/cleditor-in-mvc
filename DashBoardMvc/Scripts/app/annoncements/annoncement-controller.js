@@ -16,7 +16,7 @@ var holidaysController = (function () {
 2. It depends on annoncemeneditor,annoncementApi.
     */
 //aspx.cs
-var annoncementController = (function () {
+ACCOUNTRY_APP.annoncementController = (function (announcementRefreshHandler, announcementUpdateHandler) {
 
     return {
         init: init
@@ -36,6 +36,6 @@ var annoncementController = (function () {
         //todo 
     }
 
-})();
+})(ACCOUNTRY_APP.announcementRefreshHandler, ACCOUNTRY_APP.announcementUpdateHandler);
 
 

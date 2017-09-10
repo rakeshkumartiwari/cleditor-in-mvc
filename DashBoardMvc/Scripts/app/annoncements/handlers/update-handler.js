@@ -1,4 +1,10 @@
-﻿var announcementUpdateHandler = (function () {
+﻿ACCOUNTRY_APP.announcementUpdateHandler = (function (
+    annoncementApi,
+    announcmentPage,
+    annoncementEditor,
+    announcementRefreshHandler,
+    announcementSession
+) {
     return {
         onUpdate: onUpdate
     }
@@ -19,13 +25,19 @@
 
     function onUpdateSuccess() {
         annoncementEditor.hideEditor();
-        announcmentPage.showAnnouncements();
-        announcementRefreshHandler.refeshAnnouncements();
+        announcmentPage.showAnnouncements();//todo spelling
+        announcementRefreshHandler.refeshAnnouncements();//todo spelling
         announcmentPage.hideUpdateButton();
+
     }
 
     function onUpdateFail(obj) {
         announcmentPage.showError("Update failed.");
     }
     // onUpdate starts
-})();
+})(
+    ACCOUNTRY_APP.annoncementApi,
+    ACCOUNTRY_APP.announcmentPage,
+    ACCOUNTRY_APP.annoncementEditor,
+    ACCOUNTRY_APP.announcementRefreshHandler,
+    ACCOUNTRY_APP.announcementSession);

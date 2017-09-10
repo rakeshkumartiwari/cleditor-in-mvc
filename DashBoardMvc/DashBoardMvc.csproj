@@ -169,6 +169,7 @@
     <Content Include="Scripts\app\annoncements\announcement-session.js" />
     <Content Include="Scripts\app\annoncements\handlers\edit-handler.js" />
     <Content Include="Scripts\app\annoncements\handlers\update-handler.js" />
+    <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\user\user.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

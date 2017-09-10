@@ -1,4 +1,4 @@
-﻿var annoncementApi = (function () {
+﻿ACCOUNTRY_APP.annoncementApi = (function ($) {
    
     //repository
     return {
@@ -17,4 +17,4 @@
     function updateAnnouncement(announcement) {
         return $.post("Dashboard/UpdateAnnouncement", announcement);
     }
-})();
+})($);

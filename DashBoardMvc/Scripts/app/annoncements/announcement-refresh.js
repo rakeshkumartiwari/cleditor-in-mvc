@@ -1,4 +1,11 @@
-﻿var announcementRefreshHandler = (function () {
+﻿ACCOUNTRY_APP.announcementRefreshHandler = (function (
+    user,
+    announcmentPage,
+    announcementSession,
+    annoncementApi,
+    annoncementEditor,
+    announcementEditHandler
+) {
 
     return {
         refeshAnnouncements: refeshAnnouncements
@@ -62,4 +69,11 @@
         announcmentPage.showError("Announcement load fail");
     }
 
-})();
+})(
+    ACCOUNTRY_APP.user,
+    ACCOUNTRY_APP.announcmentPage,
+    ACCOUNTRY_APP.announcementSession,
+    ACCOUNTRY_APP.annoncementApi,
+    ACCOUNTRY_APP.annoncementEditor,
+    ACCOUNTRY_APP.announcementEditHandler
+    );

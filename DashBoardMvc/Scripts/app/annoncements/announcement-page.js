@@ -1,4 +1,4 @@
-﻿var announcmentPage = (function () {
+﻿ACCOUNTRY_APP.announcmentPage = (function ($) {
     return {
         showError: showError,
         showUpdateButton: showUpdateButton,
@@ -32,4 +32,4 @@
         $("#announcements-container").hide();
     }
 
-})();
+})($);

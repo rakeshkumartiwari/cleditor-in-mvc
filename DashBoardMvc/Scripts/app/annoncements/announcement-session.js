@@ -1,4 +1,4 @@
-﻿var announcementSession = (function () {
+﻿ACCOUNTRY_APP.announcementSession = (function () {
     var currentId=-1;
     return {
         setCurrentId: setCurrentId,

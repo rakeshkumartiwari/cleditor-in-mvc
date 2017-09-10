@@ -1,4 +1,4 @@
-﻿var user = (function () {
+﻿ACCOUNTRY_APP.user = (function () {
     var role = 'user';
     return {
         setAsAdmin: setAsAdmin,

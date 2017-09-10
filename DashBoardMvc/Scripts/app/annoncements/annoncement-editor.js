@@ -4,7 +4,7 @@
 editor.js*/
 
 //clEditor class
-var annoncementEditor = (function () {
+ACCOUNTRY_APP.annoncementEditor = (function ($) {
     var $editor;
     var editor;
     var $title;
@@ -61,4 +61,4 @@ var annoncementEditor = (function () {
         $container.hide();
     }
 
-})();
+})($);
