@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "JobseekerDetails";
+}
+
+<h2>JobseekerDetails</h2>
+
+<div id="personal-details">
+    <h2>personal-details</h2>
+    <select id="ddlGender">
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Other</option>
+    </select>
+    <div>
+        Verified Status<input type="checkbox" id="chk" />
+    </div>
+    <div>
+        <input type="button" id="btnPersonalDetailsSave" value="Save"/>
+    </div>
+</div>
+<div id="academic-details-container">
+    <h2>academic-details</h2>
+
+    <div id="academic-detail-list">
+        @*<div class="row">
+            <div class="col-sm-4">
+                <select id="ddlType">
+                    <option value="0">Select</option>
+                    <option value="1">ssc</option>
+                    <option value="2">hsc</option>
+                    <option value="3">underGraduete</option>
+                    <option value="4">PG</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <input type="button" id="btnAdd" value="Add"/>
+            </div>
+        </div>*@
+    </div>
+    <div>
+        <input type="button" id="btnAcdemicDetailsSave" value="Save"/>
+    </div>
+</div>
+
+<script src="~/Scripts/app/jobseeker/jobseeker-event.js"></script>
+<script src="~/Scripts/app/jobseeker/jobseeker-store.js"></script>
+<script src="~/Scripts/app/jobseeker/personal-details-controller.js"></script>
+<script src="~/Scripts/app/jobseeker/academic-details/academic-detail-controller.js"></script>
+<script src="~/Scripts/app/jobseeker/academic-details/academic-detaillist-controller.js"></script>
+<script src="~/Scripts/app/jobseeker/handlers/jobseeker-load-handler.js"></script>
+<script src="~/Scripts/app/jobseeker/jobseeker-main.js"></script>
