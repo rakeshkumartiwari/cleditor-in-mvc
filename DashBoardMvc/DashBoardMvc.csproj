@@ -177,6 +177,7 @@
     <Content Include="Scripts\app\jobseeker\academic-details\academic-detaillist-controller.js" />
     <Content Include="Scripts\app\jobseeker\handlers\jobseeker-AcademicDetailChanged-handler.js" />
     <Content Include="Scripts\app\jobseeker\handlers\jobseeker-load-handler.js" />
+    <Content Include="Scripts\app\jobseeker\handlers\jobseeker-loadSuccess-handler.js" />
     <Content Include="Scripts\app\jobseeker\jobseeker-event.js" />
     <Content Include="Scripts\app\jobseeker\jobseeker-main.js" />
     <Content Include="Scripts\app\jobseeker\jobseeker-selector.js" />

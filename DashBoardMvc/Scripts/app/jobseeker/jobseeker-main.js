@@ -6,6 +6,7 @@ $(function () {
     ACCOUNTRY_APP.jobseeker.store.listen();
     ACCOUNTRY_APP.jobseeker.loadHandler.listen();
     ACCOUNTRY_APP.jobseeker.academicDetailChangedHandler.listen();
+    ACCOUNTRY_APP.jobseeker.loadSuccessHandler.listen();
     amplify.publish(ACCOUNTRY_APP.jobseeker.events.Load);
 });
 
