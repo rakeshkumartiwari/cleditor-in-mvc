@@ -1,29 +1,12 @@
 ﻿ACCOUNTRY_APP.jobseeker.store = (function (amplify, events) {
     var state = {};
     var initialState = {
-        academicDetails: {
-            allDegrees: [{
-                id: 1,
-                text: "SSC"
-            },
-            {
-                id: 2,
-                text: "HSC"
-            },
-            {
-                id: 3,
-                text: "PG"
-            }
-
-
-            ],
-            selectedDegrees: []
-        }
-    }
+        academicDetails: []
+    };
     state = initialState;
     return {
         getState: getState,
-        saveDegree: saveDegree,
+        saveAcademicDetail: saveAcademicDetail,
         listen: listen,
         updateStore: updateStore
     }
@@ -31,8 +14,8 @@
     function getState() {
         return state;
     }
-    function saveDegree(degree) {
-        state.academicDetails.selectedDegrees.push(degree);
+    function saveAcademicDetail(academicDetail) {
+        state.academicDetails.push(academicDetail);
     }
     function listen() {
         //amplify.subscribe

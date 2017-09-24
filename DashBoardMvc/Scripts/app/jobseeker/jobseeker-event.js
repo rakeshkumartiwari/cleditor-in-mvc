@@ -5,7 +5,7 @@
     academicDetails: {
         AddNewDegree: "jobseeker.academicDetails.AddDegree",
         AddNewDegreeSuccess: "jobseeker.academicDetails.AddDegreeSuccess",
-
+        AcademicDetailChanged:"jobseeker.academicDetails.AcademicDetailChanged"
     }
 
 

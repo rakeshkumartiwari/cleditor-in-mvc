@@ -1,7 +1,8 @@
 ﻿ACCOUNTRY_APP.jobseeker.academicDetailListController = (function (
     amplify,
     $,
-    events
+    events,
+    selector
 ) {
 
 
@@ -30,13 +31,15 @@
     }
 
     function storeUpdatedHandler(data) {
-        if (data.academicDetails.selectedDegrees.length < 1) {
+        if (selector.isAcademicDetailsExist()) {
             amplify.publish(events.academicDetails.AddNewDegree)
         }
+
     }
 
 })(
     amplify,
     $,
-    ACCOUNTRY_APP.jobseeker.events
+    ACCOUNTRY_APP.jobseeker.events,
+    ACCOUNTRY_APP.jobseeker.selector
 );

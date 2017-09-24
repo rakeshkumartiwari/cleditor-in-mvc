@@ -19,7 +19,8 @@
        //api.getJobseekerDetails().done(loadSuccess).fail(loadFail);
         loadSuccess();
     }
-
+//only reducer can update the state.
+//it is an effect so it can fire an event and reducer can subscribe to that event and update the state.
     function loadSuccess(data) {
         store.updateStore(data);
     }
