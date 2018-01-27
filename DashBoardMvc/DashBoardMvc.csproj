@@ -144,6 +144,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobseekerController.cs" />
+    <Compile Include="Controllers\Payment\PaymentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,12 +184,17 @@
     <Content Include="Scripts\app\jobseeker\jobseeker-selector.js" />
     <Content Include="Scripts\app\jobseeker\jobseeker-store.js" />
     <Content Include="Scripts\app\jobseeker\personal-details-controller.js" />
+    <Content Include="Scripts\app\Payment\invoice-grid.api.js" />
+    <Content Include="Scripts\app\Payment\invoice-grid.component.js" />
+    <Content Include="Scripts\app\Payment\invoice-grid.module.js" />
+    <Content Include="Scripts\app\Payment\Model\invoice-grid.-row.js" />
     <Content Include="Scripts\app\user\user.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\app\Payment\invoice-grid.service.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -218,6 +224,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Jobseeker\JobseekerDetails.cshtml" />
+    <Content Include="Views\Payment\Payment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

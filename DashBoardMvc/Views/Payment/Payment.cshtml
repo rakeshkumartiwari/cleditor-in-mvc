@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+}
+
+<div class="container" style="margin-top:100px;background-color:black;color:white;">
+    <div>
+        <table id="tblPayment" class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button id="btnAdd">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/app/Payment/Model/invoice-grid.-row.js"></script>
+<script src="~/Scripts/app/Payment/invoice-grid.api.js"></script>
+<script src="~/Scripts/app/Payment/invoice-grid.service.js"></script>
+<script src="~/Scripts/app/Payment/invoice-grid.component.js"></script>
+<script src="~/Scripts/app/Payment/invoice-grid.module.js"></script>
